@@ -23,12 +23,11 @@ public class MarkdownParse {
 
             if(openBracket == -1 || openParen == -1 || closeParen == -1){
                 break;
-            } else if( ExMark == openBracket -1){
+            }else if( ExMark == openBracket -1){
                 currentIndex = openBracket + 1;
             } else if(openParen != closeBracket -1){
                 currentIndex = closeBracket + 1;
-            }
-            else{
+            }else{
                 toReturn.add(markdown.substring(openParen +1, closeParen));
             }
         }
@@ -42,7 +41,9 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
    	    System.out.println(links);         
-
+           //javac -cp ".;lib\junit-4.12.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java   
+           //java -cp ".;lib/junit-4.12.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest  
+           
     }
 }
 
