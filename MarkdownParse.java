@@ -39,8 +39,10 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
    	    System.out.println(links);         
-           //javac -cp ".;lib\junit-4.12.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java   
-           //java -cp ".;lib/junit-4.12.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest  
+           //javac -cp .:lib/junit-4.12.jar;lib\hamcrest-core-1.3.jar MarkdownParseTest.java
+
+           //java -cp .;lib/junit-4.12.jar;lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest  
+           //javac -cp .:lib\junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
            
     }
 }
